@@ -202,6 +202,13 @@ export default class App extends Component {
               </td>
             </tr>
             <tr>
+              <th>SproutVideo</th>
+              <td>
+                {this.renderLoadButton('http://videos.sproutvideo.com/embed/189bdbb01e1ce7c790/98b77e706be88310', 'Test A')}
+                {this.renderLoadButton('http://videos.sproutvideo.com/embed/e898d2b5111be3c860/546cd1548010aaeb', 'Test B')}
+              </td>
+            </tr>
+            <tr>
               <th>Files</th>
               <td>
                 {this.renderLoadButton('http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4', 'MP4')}

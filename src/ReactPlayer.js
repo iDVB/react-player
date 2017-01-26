@@ -8,6 +8,7 @@ import FilePlayer from './players/FilePlayer'
 import Streamable from './players/Streamable'
 import Vidme from './players/Vidme'
 import Wistia from './players/Wistia'
+import SproutVideo from './players/SproutVideo'
 
 export default class ReactPlayer extends Component {
   static displayName = 'ReactPlayer'
@@ -70,6 +71,8 @@ export default class ReactPlayer extends Component {
       players.push(Vidme)
     } else if (Wistia.canPlay(url)) {
       players.push(Wistia)
+    } else if (SproutVideo.canPlay(url)) {
+      players.push(SproutVideo)
     } else if (url) {
       // Fall back to FilePlayer if nothing else can play the URL
       players.push(FilePlayer)
